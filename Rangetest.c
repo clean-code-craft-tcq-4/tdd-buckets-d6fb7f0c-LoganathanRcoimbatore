@@ -4,7 +4,7 @@
 
 void TEST_CASE_01()
 {
-    int Data[]={4,1,1};
+    int Data[]={4,5};
     int Totalreadings=sizeof(Data)/sizeof(Data[0]);
     assert(DetectAndDisplayRange(Data,Totalreadings) == 1);
 }
