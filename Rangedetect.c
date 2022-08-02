@@ -35,7 +35,7 @@ void PrintRangeInfo(rangeInfo *Data_struct,int totalRange)
          }
          else
          {
-            printf("%d , %d\n",Data_struct[Rangecount].RangeStart,Data_struct[Rangecount].readingsInRange); 
+            printf("%d , %d\n",Data_struct[Rangecount].RangeStart,Data_struct[Rangecount].ReadingsInRange); 
          }
     }
 
@@ -44,7 +44,7 @@ int DetectAndDisplayRange(int * readings,int totalData)
 {
     int CheckedRanges;
     static rangeInfo DataForDisplay[DISPLAY_SIZE];
-    CheckedRanges=detectRange(readings,totalData,DataForDisplay);
-    printRangeInfo(DataForDisplay,CheckedRanges);
+    CheckedRanges=DetectRange(readings,totalData,DataForDisplay);
+    PrintRangeInfo(DataForDisplay,CheckedRanges);
     return(CheckedRanges);
 }
