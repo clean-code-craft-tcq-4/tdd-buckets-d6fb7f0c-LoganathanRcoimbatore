@@ -3,11 +3,13 @@
 
 typedef struct
 {
-int RangeStart;
-int RangeEnd;
-int ReadingsInRange;
+int rangeStart;
+int rangeEnd;
+int readingsInRange;
 }rangeInfo;
 
-int DetectRange(int * reading,int size,rangeInfo *Data_struct);
-void PrintRangeInfo(rangeInfo *Data_struct,int totalRange);
+int removeZeroValue(int* inputReading,int* outputReading,int size);
+int * readingSorting(int* inputReading,int size);
+int detectRange(int * reading,int size,rangeInfo *Data_struct);
+void printRangeInfo(rangeInfo *Data_struct,int totalRange);
 int DetectAndDisplayRange(int * readings,int totalData);
